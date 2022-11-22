@@ -44,6 +44,10 @@ namespace Formulaire_windowsForms
             this.labelErreur = new System.Windows.Forms.Label();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.labelErreurPhoto = new System.Windows.Forms.Label();
+            this.textBoxPseudo = new System.Windows.Forms.TextBox();
+            this.labelPseudo = new System.Windows.Forms.Label();
+            this.labelErreurPseudo = new System.Windows.Forms.Label();
+            this.labelListeUtilisateurs = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.photo_profile)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +78,7 @@ namespace Formulaire_windowsForms
             // labelNom
             // 
             this.labelNom.AutoSize = true;
-            this.labelNom.Location = new System.Drawing.Point(77, 369);
+            this.labelNom.Location = new System.Drawing.Point(77, 372);
             this.labelNom.Name = "labelNom";
             this.labelNom.Size = new System.Drawing.Size(52, 25);
             this.labelNom.TabIndex = 3;
@@ -150,7 +154,9 @@ namespace Formulaire_windowsForms
             // comboBoxUtilisateurs
             // 
             this.comboBoxUtilisateurs.FormattingEnabled = true;
-            this.comboBoxUtilisateurs.Location = new System.Drawing.Point(384, 22);
+            this.comboBoxUtilisateurs.Items.AddRange(new object[] {
+            "item1"});
+            this.comboBoxUtilisateurs.Location = new System.Drawing.Point(384, 49);
             this.comboBoxUtilisateurs.Name = "comboBoxUtilisateurs";
             this.comboBoxUtilisateurs.Size = new System.Drawing.Size(182, 33);
             this.comboBoxUtilisateurs.TabIndex = 10;
@@ -196,12 +202,52 @@ namespace Formulaire_windowsForms
             this.labelErreurPhoto.TabIndex = 13;
             this.labelErreurPhoto.Text = "Veuillez choisir une photo";
             // 
+            // textBoxPseudo
+            // 
+            this.textBoxPseudo.Location = new System.Drawing.Point(253, 496);
+            this.textBoxPseudo.Name = "textBoxPseudo";
+            this.textBoxPseudo.Size = new System.Drawing.Size(260, 31);
+            this.textBoxPseudo.TabIndex = 14;
+            // 
+            // labelPseudo
+            // 
+            this.labelPseudo.AutoSize = true;
+            this.labelPseudo.Location = new System.Drawing.Point(77, 496);
+            this.labelPseudo.Name = "labelPseudo";
+            this.labelPseudo.Size = new System.Drawing.Size(71, 25);
+            this.labelPseudo.TabIndex = 15;
+            this.labelPseudo.Text = "Pseudo";
+            // 
+            // labelErreurPseudo
+            // 
+            this.labelErreurPseudo.AutoSize = true;
+            this.labelErreurPseudo.BackColor = System.Drawing.Color.Red;
+            this.labelErreurPseudo.ForeColor = System.Drawing.Color.White;
+            this.labelErreurPseudo.Location = new System.Drawing.Point(77, 540);
+            this.labelErreurPseudo.Name = "labelErreurPseudo";
+            this.labelErreurPseudo.Size = new System.Drawing.Size(451, 25);
+            this.labelErreurPseudo.TabIndex = 16;
+            this.labelErreurPseudo.Text = "Ce pseudo déja utilisé euillez réinsérer un pseudo valide";
+            // 
+            // labelListeUtilisateurs
+            // 
+            this.labelListeUtilisateurs.AutoSize = true;
+            this.labelListeUtilisateurs.Location = new System.Drawing.Point(384, 21);
+            this.labelListeUtilisateurs.Name = "labelListeUtilisateurs";
+            this.labelListeUtilisateurs.Size = new System.Drawing.Size(169, 25);
+            this.labelListeUtilisateurs.TabIndex = 17;
+            this.labelListeUtilisateurs.Text = "Liste des utilisateurs";
+            // 
             // Formulaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(578, 778);
+            this.Controls.Add(this.labelListeUtilisateurs);
+            this.Controls.Add(this.labelErreurPseudo);
+            this.Controls.Add(this.labelPseudo);
+            this.Controls.Add(this.textBoxPseudo);
             this.Controls.Add(this.labelErreurPhoto);
             this.Controls.Add(this.buttonProfile);
             this.Controls.Add(this.labelErreur);
@@ -218,7 +264,7 @@ namespace Formulaire_windowsForms
             this.Controls.Add(this.photo_profile);
             this.Name = "Formulaire";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Form1";
+            this.Text = "Formaulaire";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.photo_profile)).EndInit();
             this.ResumeLayout(false);
@@ -243,5 +289,9 @@ namespace Formulaire_windowsForms
         private Label labelErreur;
         private Button buttonProfile;
         private Label labelErreurPhoto;
+        private TextBox textBoxPseudo;
+        private Label labelPseudo;
+        private Label labelErreurPseudo;
+        private Label labelListeUtilisateurs;
     }
 }
